@@ -1,0 +1,13 @@
+This is a little pet project that stems from the task of recovering the passwords of a list of users from a site I used to work on. Naturally all the passwords were hashed so I wrote this little script that uses two public websites to "crack" those hashes. It's not really cracking as hashing is destructive but rather those two sites use rainbow tables to check already calculated hashes against the string you query them with.
+
+For now the script is exactly as I wrote it back in the days which means that your input data has to be in a file called 'users.txt'. This file needs to be a CSV file with a semi-colon used as a seperator. The lines need to have the following format:
+
+login;email;password
+
+The eMail adress is just for convenience and is optional really, but the second column needs to be there (can be emtpy).
+
+If I find the time I will gradually make this better:
+
+- better input handling
+- add more sites to query
+- modularize it so it can be used in other projects (i.e. make it a gem)
